@@ -8,6 +8,19 @@ abstract: "This is abstract, will add later"
 output: pdf_document
 ---
 
+##Required Libraries and read in Data
+```{r setup, include=FALSE}
+library(tidyverse)
+library(dplyr)
+nfl2008_fga<-read.csv("nfl2008_fga.csv")
+```
+##Get only required Columns
+```{r, echo = FALSE}
+nfl2008_fga_dist <- data.frame( nfl2008_fga$distance, nfl2008_fga$GOOD)
+```
+
+
+
 ## R Markdown
 
 This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
